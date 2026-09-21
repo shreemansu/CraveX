@@ -1,0 +1,6 @@
+package com.carve.cravex.enums;
+
+public enum NotificationType {
+    ORDER_PLACED, ORDER_CONFIRMED, ORDER_PREPARING, ORDER_READY,
+    OUT_FOR_DELIVERY, ORDER_DELIVERED, DELIVERY_ASSIGNED, ORDER_CANCELLED
+}

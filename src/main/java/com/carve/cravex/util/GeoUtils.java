@@ -1,0 +1,22 @@
+package com.carve.cravex.util;
+
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.Point;
+import org.locationtech.jts.geom.PrecisionModel;
+
+public class GeoUtils {
+
+    private static final GeometryFactory GEOMETRY_FACTORY=new GeometryFactory(new PrecisionModel(),4326);
+
+    public static Point createPoint(double latitude,double longitude){
+        return GEOMETRY_FACTORY.createPoint(new Coordinate(longitude,latitude));
+    }
+
+    public static double getLatitude(Point point){
+        return point.getY();
+    }
+    public static double getLongitude(Point point){
+        return point.getX();
+    }
+}
